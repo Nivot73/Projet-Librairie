@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    text-align: center;
+}
+
+header {
+    min-height: 15vh;
+    background-color: aqua;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    padding: 2vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer {
+    min-height: 15vh;
+    background-color: greenyellow;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 80vw;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+table {
+    margin: 0 auto;
+    max-width: 20vw;
+    border: 1px solid black;
+}
+
+.LivreList {
+    max-width: 80vw;
+}
+
+td {
+    border: 1px solid black;
+}

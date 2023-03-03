@@ -1,8 +1,8 @@
 <?php
 
 $databaseDNS    	= 'mysql:host=localhost;dbname=librairie';
-$databaseUsername 	= 'librairie_admin';
-$databasePassword 	= 'librairie_password';
+$databaseUsername 	= 'root';
+$databasePassword 	= '';
 
 
 

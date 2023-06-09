@@ -1,4 +1,10 @@
 <?php
+
+if(!isset($_SESSION['connecter'])){
+    header('Location: index.php');
+    exit();
+}
+
 require_once('bdd/connect.php');
 
 if (isset($_POST['genre']) && !empty($_POST['genre'])
@@ -15,6 +21,7 @@ if (isset($_POST['genre']) && !empty($_POST['genre'])
     $query->execute();
 
     header('Location: index.php?page=ListGenre');
+    exit();
 }
 
 require_once('bdd/close.php');

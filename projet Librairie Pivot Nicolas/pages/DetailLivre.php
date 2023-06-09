@@ -11,9 +11,11 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if (!$livre) {
         header('Location: index.php');
+        exit();
     }
 } else {
     header('Location: index.php');
+    exit();
 }
     $id =   $livre['idAuteur'];
     $sql = 'SELECT * FROM `auteurs` WHERE `id`=:id';

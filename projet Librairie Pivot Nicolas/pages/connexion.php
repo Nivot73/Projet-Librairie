@@ -12,7 +12,6 @@ if(isset($_POST['nom']) && !empty($_POST['nom']) && isset($_POST['mdp']) && !emp
         $_SESSION['connecter'] = true;
 
         header("location:index.php");
-
         exit();
     }
     else {

@@ -21,9 +21,11 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 
     if (!$genre) {
         header('Location: index.php');
+        exit();
     }
 } else {
     header('Location: index.php');
+    exit();
 }
 
 require_once('bdd/close.php');

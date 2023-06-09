@@ -1,4 +1,10 @@
 <?php
+
+if(!isset($_SESSION['connecter'])){
+    header('Location: index.php');
+    exit();
+}
+
 require_once('bdd/connect.php');
 
 if (isset($_POST)) {
@@ -25,6 +31,7 @@ if (isset($_POST)) {
         $query->execute();
 
         header('Location: index.php?page=ListAuteur');
+        exit();
     }}
 
 require_once('bdd/close.php');

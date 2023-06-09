@@ -35,9 +35,13 @@ require_once('bdd/close.php');
 if ($genre['id'] != 1) {
 ?>
 
+<?php
+if(isset($_SESSION['connecter'])){ ?>
+
 <p><a href="?page=ModifierGenre&id=<?= $genre['id'] ?>">Modifier le nom du genre</a> <a href="?page=SupprimerGenre&id=<?= $genre['id'] ?>">Supprimer</a></p>
 
-<?php } ?>
+
+<?php }} ?>
 
 <h2>livre pour le genre : <?= $genre['genre'] ?></h2>
 

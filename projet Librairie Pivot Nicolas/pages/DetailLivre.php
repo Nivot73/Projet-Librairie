@@ -53,4 +53,8 @@ if(empty($genre['genre'])){
 <p>ISBN : <?= $livre['isbn'] ?></p>
 <p>Stock : <?= $livre['stock'] ?></p>
 <p>Prix : <?= $livre['prix'] ?> €</p>
+
+<?php
+if(isset($_SESSION['connecter'])){ ?>
 <p><a href="?page=ModifierLivre&id=<?= $livre['id'] ?>">Modifier</a> <a href="?page=SupprimerLivre&id=<?= $livre['id'] ?>">Supprimer</a></p>
+<?php } ?>

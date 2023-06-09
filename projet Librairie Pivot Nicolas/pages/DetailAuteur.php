@@ -47,9 +47,12 @@ if ($auteur['status'] == "mort"){
 <p>Date de deces : <?= $auteur['dateDeces'] ?></p>
 <?php } ?>
 
+<?php
+if(isset($_SESSION['connecter'])){ ?>
+
 <p><a href="?page=ModifierAuteur&id=<?= $auteur['id'] ?>">Modifier</a> <a href="?page=SupprimerAuteur&id=<?= $auteur['id'] ?>">Supprimer</a></p>
 
-<?php } ?>
+<?php }} ?>
 
 <p>Liste des livres de l'auteur :</p>
 

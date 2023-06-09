@@ -22,3 +22,20 @@ if(isset($_POST['nom']) && !empty($_POST['nom']) && isset($_POST['mdp']) && !emp
 else {
     session_destroy();
 }
+
+if(!empty($erreur)){
+        
+    $erreur;    
+}
+
+?>
+
+<form action="" method="post">
+    <label for="nom">Identifiant : </label>
+    <input type="text" name="nom" id="nom">
+    <br>
+    <label for="mdp">Mot de Passe : </label>
+    <input type="password" name="mdp" id="mdp">
+    <br>
+    <input type="submit" value="Se Connecter">
+</form>

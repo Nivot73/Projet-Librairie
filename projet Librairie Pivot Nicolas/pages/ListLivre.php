@@ -19,7 +19,10 @@ $listGenre = $query->fetchAll(PDO::FETCH_ASSOC);
 require_once('bdd/close.php');
 ?>
 
+<?php
+if(isset($_SESSION['connecter'])){ ?>
 <p><a href="?page=AjouterLivre">Ajouter un Livre</a></p>
+<?php } ?>
 
 <table class="LivreList">
     <thead>

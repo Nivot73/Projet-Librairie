@@ -11,7 +11,10 @@ require_once('bdd/close.php');
 $auteurExist = false;
 ?>
 
+<?php
+if(isset($_SESSION['connecter'])){ ?>
 <p><a href="?page=AjouterAuteur">Ajouter un Auteur</a></p>
+<?php } ?>
 
 <table>
     <?php

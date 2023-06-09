@@ -9,7 +9,10 @@ $listGenre = $query->fetchAll(PDO::FETCH_ASSOC);
 require_once('bdd/close.php');
 ?>
 
+<?php
+if(isset($_SESSION['connecter'])){ ?>
 <p><a href="?page=AjouterGenre">Ajouter un Genre</a></p>
+<?php } ?>
 
 <table>
     <?php

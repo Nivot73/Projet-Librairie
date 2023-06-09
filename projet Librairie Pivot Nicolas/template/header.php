@@ -15,8 +15,16 @@
     <h1>Biblioteque de Moncus-dans-les-bois</h1>
     <nav>
         <a href="index.php">Accueil</a>
-        <a href="index.php?page=ListLivre">Liste des Livres</a>
-        <a href="index.php?page=ListAuteur">Liste des Auteurs</a>
-        <a href="index.php?page=ListGenre">Liste des genres</a>
+        <a href="?page=ListLivre">Liste des Livres</a>
+        <a href="?page=ListAuteur">Liste des Auteurs</a>
+        <a href="?page=ListGenre">Liste des genres</a>
+        <?php
+        if(isset($_SESSION['connecter'])){ ?>
+        <a href="?page=deconnexion">Deconnexion</a>
+        <?php }
+        else{
+        ?>
+        <a href="?page=connexion">Connexion</a>
+        <?php } ?>
     </nav>
 </header>

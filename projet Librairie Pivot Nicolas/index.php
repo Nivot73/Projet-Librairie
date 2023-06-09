@@ -1,4 +1,5 @@
 <?php
+session_start();
 ob_start();
 
 if(isset($_GET['page'])){
@@ -13,6 +14,16 @@ switch($page) :
 	case 'accueil' :
    		$title = "Accueil du site" ;
 		include 'pages/accueil.php' ;
+	break;
+
+	case 'connexion' :
+		$title = "Page de Connexion" ;
+		include 'pages/connexion.php' ;
+	break;
+
+	case 'deconnexion' :
+		$title = "Page de Deconnexion" ;
+		include 'pages/deconnexion.php' ;
 	break;
    
 	case 'ListLivre' :

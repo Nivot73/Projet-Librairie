@@ -1,4 +1,10 @@
 <?php
+
+if(!isset($_SESSION['connecter'])){
+    header('Location: index.php');
+    exit();
+}
+
 require_once('bdd/connect.php');
 
 if (isset($_POST['id']) && !empty($_POST['id'])
@@ -29,6 +35,7 @@ if (isset($_POST['id']) && !empty($_POST['id'])
     $cible = $_POST['id'];
 
     header("Location: index.php?page=DetailGenre&id=".$cible."");
+    exit();
 }
 
 if (isset($_GET['id']) && !empty($_GET['id'])) 

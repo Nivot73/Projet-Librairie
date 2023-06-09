@@ -1,5 +1,4 @@
 <?php
-
 require_once('bdd/connect.php');
 
 $sql = 'SELECT * FROM `livres` ';
@@ -18,7 +17,6 @@ $query->execute();
 $listGenre = $query->fetchAll(PDO::FETCH_ASSOC);
 
 require_once('bdd/close.php');
-
 ?>
 
 <p><a href="?page=AjouterLivre">Ajouter un Livre</a></p>

@@ -1,5 +1,4 @@
 <?php
-
 require_once('bdd/connect.php');
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {

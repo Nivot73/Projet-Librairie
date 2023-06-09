@@ -93,68 +93,64 @@ if (isset($_GET['id']) && !empty($_GET['id']))
 require_once('bdd/close.php');
 ?>
 
-<form method="post" action="" enctype="multipart/form-data">
-    
-<label for="image">Ajouter une image (attention, il est nécessaire de la chercher à nouveau)</label>
-<input type="file" name="image" id="image">
-<br>
-<label for="titre">titre :</label>
-<input type="text" name="titre" id="titre" value="<?= $livre['titre'] ?>" required>
-<br>
-<label for="resume">resume :</label>
-<textarea type="text" name="resume" id="resume" required><?= $livre['resume'] ?></textarea>
-<br>
-<label for="idAuteur">auteur :</label>
-<select name="idAuteur" id="idAuteur">
-<?php
-    foreach ($listAuteur as $auteur) {
+<form method="post" action="" enctype="multipart/form-data">    
+    <label for="image">Ajouter une image (attention, il est nécessaire de la chercher à nouveau)</label>
+    <input type="file" name="image" id="image">
+    <br>
+    <label for="titre">titre :</label>
+    <input type="text" name="titre" id="titre" value="<?= $livre['titre'] ?>" required>
+    <br>
+    <label for="resume">resume :</label>
+    <textarea type="text" name="resume" id="resume" required><?= $livre['resume'] ?></textarea>
+    <br>
+    <label for="idAuteur">auteur :</label>
+    <select name="idAuteur" id="idAuteur">
+    <?php
+        foreach ($listAuteur as $auteur) {
 
-    if ($auteur['id'] == $livre['idAuteur']){
-?>
-    <option value="<?= $livre['idAuteur'] ?>"><?= $auteur['nom']." ".$auteur['prenom'] ?></option>
-<?php }}
-    foreach ($listAuteur as $auteur) {
-?>
-    <option value="<?= $auteur['id'] ?>"><?= $auteur['nom']." ".$auteur['prenom'] ?></option>
-<?php } ?>
-</select>
-<br>
-<label for="idGenre">genre :</label>
-<select name="idGenre" id="idGenre">
-<?php
-    foreach ($listGenre as $genre) {
+        if ($auteur['id'] == $livre['idAuteur']){
+    ?>
+        <option value="<?= $livre['idAuteur'] ?>"><?= $auteur['nom']." ".$auteur['prenom'] ?></option>
+    <?php }}
+        foreach ($listAuteur as $auteur) {
+    ?>
+        <option value="<?= $auteur['id'] ?>"><?= $auteur['nom']." ".$auteur['prenom'] ?></option>
+    <?php } ?>
+    </select>
+    <br>
+    <label for="idGenre">genre :</label>
+    <select name="idGenre" id="idGenre">
+    <?php
+        foreach ($listGenre as $genre) {
 
-    if ($genre['id'] == $livre['idAuteur']){
-?>
-    <option value="<?= $livre['idGenre'] ?>"><?= $genre['genre'] ?></option>
-<?php }}
-    foreach ($listGenre as $genre) {
-?>
-    <option value="<?= $genre['id'] ?>"><?= $genre['genre'] ?></option>
-<?php } ?>
-</select>
-<br>
-<label for="dateParution">date de Parution :</label>
-<input type="date" name="dateParution" id="dateParution" value="<?= $livre['dateParution'] ?>" required>
-<br>
-<label for="edition">edition :</label>
-<input type="text" name="edition" id="edition" value="<?= $livre['edition'] ?>" required>
-<br>
-<label for="langue">langue :</label>
-<input type="text" name="langue" id="langue" value="<?= $livre['langue'] ?>" required>
-<br>
-<label for="isbn">isbn :</label>
-<input type="number" name="isbn" id="isbn" min="1" value="<?= $livre['isbn'] ?>" required>
-<br>
-<label for="stock">Stock :</label>
-<input type="number" name="stock" id="stock" min="0" value="<?= $livre['stock'] ?>" required>
-<br>
-<label for="prix">Prix :</label>
-<input type="number" name="prix" id="prix" min="0" step="0.1" value="<?= $livre['prix'] ?>" required>
-<br>
-<input type="hidden" name="id" id="id" value="<?= $livre['id'] ?>" required>
-
-<input type="submit" value="enregistrer">
-
+        if ($genre['id'] == $livre['idAuteur']){
+    ?>
+        <option value="<?= $livre['idGenre'] ?>"><?= $genre['genre'] ?></option>
+    <?php }}
+        foreach ($listGenre as $genre) {
+    ?>
+        <option value="<?= $genre['id'] ?>"><?= $genre['genre'] ?></option>
+    <?php } ?>
+    </select>
+    <br>
+    <label for="dateParution">date de Parution :</label>
+    <input type="date" name="dateParution" id="dateParution" value="<?= $livre['dateParution'] ?>" required>
+    <br>
+    <label for="edition">edition :</label>
+    <input type="text" name="edition" id="edition" value="<?= $livre['edition'] ?>" required>
+    <br>
+    <label for="langue">langue :</label>
+    <input type="text" name="langue" id="langue" value="<?= $livre['langue'] ?>" required>
+    <br>
+    <label for="isbn">isbn :</label>
+    <input type="number" name="isbn" id="isbn" min="1" value="<?= $livre['isbn'] ?>" required>
+    <br>
+    <label for="stock">Stock :</label>
+    <input type="number" name="stock" id="stock" min="0" value="<?= $livre['stock'] ?>" required>
+    <br>
+    <label for="prix">Prix :</label>
+    <input type="number" name="prix" id="prix" min="0" step="0.1" value="<?= $livre['prix'] ?>" required>
+    <br>
+    <input type="hidden" name="id" id="id" value="<?= $livre['id'] ?>" required>
+    <input type="submit" value="enregistrer">
 </form>
-

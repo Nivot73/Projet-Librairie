@@ -1,5 +1,4 @@
 <?php
-
 require_once('bdd/connect.php');
 
 $sql = 'SELECT * FROM `auteurs` ';
@@ -24,6 +23,5 @@ $auteurExist = false;
     </tr>    
     <?php  }} else { ?>
         <tr><td>Aucun auteur n'existe</td></tr>
-    <?php }  ?>
-    
+    <?php }  ?>    
 </table>

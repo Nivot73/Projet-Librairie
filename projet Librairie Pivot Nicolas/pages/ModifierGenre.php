@@ -35,14 +35,13 @@ if (isset($_GET['id']) && !empty($_GET['id']))
 require_once('bdd/close.php');
 ?>
 
-<form method="post" action="">
-    
-<label for="genre">nom du genre :</label>
-<input type="text" name="genre" id="genre" value="<?= $genre['genre'] ?>" required>
-<br>
-<label for="description">description du genre :</label>
-<input type="text" name="description" id="description" required>
-<br>
-<input type="hidden" name="id" id="id" value="<?= $genre['id'] ?>" required>
-<input type="submit" value="enregistrer">
+<form method="post" action="">    
+    <label for="genre">nom du genre :</label>
+    <input type="text" name="genre" id="genre" value="<?= $genre['genre'] ?>" required>
+    <br>
+    <label for="description">description du genre :</label>
+    <input type="text" name="description" id="description" required>
+    <br>
+    <input type="hidden" name="id" id="id" value="<?= $genre['id'] ?>" required>
+    <input type="submit" value="enregistrer">
 </form>

@@ -14,3 +14,4 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 }
 
 require_once('bdd/close.php');
+?>

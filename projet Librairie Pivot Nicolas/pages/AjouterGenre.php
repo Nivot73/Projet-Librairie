@@ -21,12 +21,11 @@ require_once('bdd/close.php');
 ?>
 
 <form method="post" action="">
-
-<label for="genre">nom du genre :</label>
-<input type="text" name="genre" id="genre" required>
-<br>
-<label for="description">description du genre :</label>
-<input type="text" name="description" id="description" required>
-<br>
-<input type="submit" value="enregistrer">
+    <label for="genre">nom du genre :</label>
+    <input type="text" name="genre" id="genre" required>
+    <br>
+    <label for="description">description du genre :</label>
+    <input type="text" name="description" id="description" required>
+    <br>
+    <input type="submit" value="enregistrer">
 </form>

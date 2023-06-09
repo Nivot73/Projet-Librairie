@@ -79,15 +79,12 @@ require_once('bdd/close.php');
   <label for="image">Ajouter une image</label>
   <input type="file" name="image" id="image">
   <br>
-
   <label for="titre">titre :</label>
   <input type="text" name="titre" id="titre" required>
   <br>
-
   <label for="resume">resume :</label>
   <textarea type="text" name="resume" id="resume" required></textarea>
   <br>
-
   <label for="idAuteur">auteur :</label>
   <select name="idAuteur" id="idAuteur">
   <?php
@@ -103,7 +100,6 @@ require_once('bdd/close.php');
   <?php } ?>
   </select>
   <br>
-
   <label for="idGenre">genre :</label>
   <select name="idGenre" id="idGenre">
   <?php
@@ -119,30 +115,23 @@ require_once('bdd/close.php');
   <?php } ?>
   </select>
   <br>
-
   <label for="dateParution">date de Parution :</label>
   <input type="date" name="dateParution" id="dateParution" required>
   <br>
-
   <label for="edition">edition :</label>
   <input type="text" name="edition" id="edition" required>
   <br>
-
   <label for="langue">langue :</label>
   <input type="text" name="langue" id="langue" required>
   <br>
-
   <label for="isbn">isbn :</label>
   <input type="number" name="isbn" id="isbn" min="1" required>
   <br>
-
   <label for="stock">Stock :</label>
   <input type="number" name="stock" id="stock" min="0" required>
   <br>
-
   <label for="prix">Prix :</label>
   <input type="number" name="prix" id="prix" min="0" step="0.1" required>
   <br>
-
   <input type="submit" value="enregistrer">
 </form>

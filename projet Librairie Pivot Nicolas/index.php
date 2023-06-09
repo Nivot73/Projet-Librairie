@@ -100,5 +100,4 @@ endswitch ;
 $contenu = ob_get_clean() ;
 
 include 'template/template.php' ;
-
 ?>

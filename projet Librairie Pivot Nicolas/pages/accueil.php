@@ -13,7 +13,6 @@
 <p>Lorsque vous validerez un ajout, celui-ci sera fait automatiquement à la BDD.</p>
 <p>---------------</p>
 
-
 <h3>BDD</h3>
 <p>---------------</p>
 <p>Dans le dossier BDD, modifier le fichier connect.php pour acceder a la BDD desiré.</p>

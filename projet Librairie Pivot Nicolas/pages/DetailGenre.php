@@ -1,5 +1,4 @@
 <?php
-
 require_once('bdd/connect.php');
 
 $sql = 'SELECT * FROM `livres` ';
